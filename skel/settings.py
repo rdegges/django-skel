@@ -1,5 +1,3 @@
-# Django settings for skel project.
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
