@@ -8,12 +8,14 @@ from urlparse import urlparse, uses_netloc
 from common import *
 
 
+env = lambda e, d: environ[e] if environ.has_key(e) else d
+
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-host
-EMAIL_HOST = environ['EMAIL_HOST'] or 'smtp.gmail.com'
+EMAIL_HOST = env('EMAIL_HOST', 'smtp.gmail.com')
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-host-password
 EMAIL_HOST_PASSWORD = environ['EMAIL_HOST_PASSWORD'] or ''
