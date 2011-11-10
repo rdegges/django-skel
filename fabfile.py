@@ -1,17 +1,21 @@
 """Management utilities."""
 
 
-from fabric.api import local, task
+from os.path import abspath
+
+from fabric.api import env, local, task
 from fabric.context_managers import lcd
 
 
 ########## GLOBALS
-PROJECT_ROOT = 'skel'
+env.root = abspath('skel')
+env.admin = 'django-admin.py'
 ########## END GLOBALS
 
 
 @task
 def syncdb():
     """Run a syncdb."""
-    with lcd('skel'):
-        local('django-admin.py syncdb --noinput')
+    with lcd(env.root):
+        local('%(admin)s help' % env)
+        local('%(admin)s syncdb --noinput' % env)
