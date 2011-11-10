@@ -10,6 +10,7 @@ env.settings = 'settings.prod'
 ########## END GLOBALS
 
 
+########## DATABASE MANAGEMENT
 @task
 def syncdb():
     """Run a syncdb."""
@@ -28,3 +29,4 @@ def migrate(app=None):
                 env.settings))
     else:
         local('%(run)s migrate --noinput --settings=%(settings)s' % env)
+########## END DATABASE MANAGEMENT
