@@ -158,6 +158,9 @@ INSTALLED_APPS = (
     # Admin panel and documentation:
     'django.contrib.admin',
     'django.contrib.admindocs',
+
+    # South database migrations:
+    'south',
 )
 ########## END APP CONFIGURATION
 
