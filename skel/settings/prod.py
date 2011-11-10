@@ -8,7 +8,7 @@ from urlparse import urlparse, uses_netloc
 from common import *
 
 
-# Helper lambda for gracefully degrading environmental options:
+# Helper lambda for gracefully degrading environmental variables:
 env = lambda e, d: environ[e] if environ.has_key(e) else d
 
 
