@@ -8,6 +8,8 @@ from fabric.api import abort, env, local, settings, task
 ########## GLOBALS
 env.run = 'heroku run python skel/manage.py'
 env.settings = 'settings.prod'
+
+HEROKU_STACK = 'cedar'
 ########## END GLOBALS
 
 
@@ -56,3 +58,26 @@ def migrate(app=None):
     else:
         local('%(run)s migrate --noinput --settings=%(settings)s' % env)
 ########## END DATABASE MANAGEMENT
+
+
+########## HEROKU MANAGEMENT
+@task
+def bootstrap():
+    """Bootstrap your new application with Heroku, preparing it for a production
+    deployment. This will:
+
+        - Create a new Heroku application.
+    """
+    cont('heroku create --stack %s' % HEROKU_STACK,
+            "Couldn't create the Heroku app, continue anyway?")
+
+
+@task
+def destroy():
+    """Destroy this Heroku application. Wipe it from existance.
+
+    .. note::
+        This really will completely destroy your application. Think twice.
+    """
+    local('heroku apps:destroy')
+########## END HEROKU MANAGEMENT
