@@ -74,6 +74,7 @@ def bootstrap():
         - Install all ``HEROKU_ADDONS``.
         - Sync the database.
         - Apply all database migrations.
+        - Initialize New Relic's monitoring add-on.
     """
     cont('heroku create --stack %s' % HEROKU_STACK,
             "Couldn't create the Heroku app, continue anyway?")
