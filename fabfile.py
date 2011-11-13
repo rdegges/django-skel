@@ -10,6 +10,10 @@ env.run = 'heroku run python skel/manage.py'
 env.settings = 'settings.prod'
 
 HEROKU_STACK = 'cedar'
+HEROKU_ADDONS = (
+    'shared-database:5mb',
+    'newrelic:standard',
+)
 ########## END GLOBALS
 
 
@@ -67,9 +71,14 @@ def bootstrap():
     deployment. This will:
 
         - Create a new Heroku application.
+        - Install all ``HEROKU_ADDONS``.
     """
     cont('heroku create --stack %s' % HEROKU_STACK,
             "Couldn't create the Heroku app, continue anyway?")
+
+    for addon in HEROKU_ADDONS:
+        cont('heroku addons:add %s' % addon,
+            "Couldn't add %s to your Heroku app, continue anyway?" % addon)
 
 
 @task
