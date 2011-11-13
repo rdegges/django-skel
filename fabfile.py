@@ -72,6 +72,8 @@ def bootstrap():
 
         - Create a new Heroku application.
         - Install all ``HEROKU_ADDONS``.
+        - Sync the database.
+        - Apply all database migrations.
     """
     cont('heroku create --stack %s' % HEROKU_STACK,
             "Couldn't create the Heroku app, continue anyway?")
@@ -79,6 +81,12 @@ def bootstrap():
     for addon in HEROKU_ADDONS:
         cont('heroku addons:add %s' % addon,
             "Couldn't add %s to your Heroku app, continue anyway?" % addon)
+
+    cont('git push heroku master',
+            "Couldn't push your application to Heroku, continue anyway?")
+
+    syncdb()
+    migrate()
 
 
 @task
