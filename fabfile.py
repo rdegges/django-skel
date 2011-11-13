@@ -88,6 +88,9 @@ def bootstrap():
     syncdb()
     migrate()
 
+    cont('%(run)s newrelic-admin validate-config - stdout' % env,
+            "Couldn't initialize New Relic, continue anyway?")
+
 
 @task
 def destroy():
