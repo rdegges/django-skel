@@ -24,7 +24,7 @@ path.append(normpath(join(DJANGO_ROOT, 'libs')))
 
 ########## DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#debug
-DEBUG = True
+DEBUG = False
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#template-debug
 TEMPLATE_DEBUG = DEBUG
