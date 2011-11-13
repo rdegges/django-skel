@@ -58,3 +58,11 @@ try:
 except:
     print "Unexpected error:", exc_info()
 ########## END DATABASE CONFIGURATION
+
+
+########## WEBSERVER CONFIGURATION
+# See: http://gunicorn.org/
+INSTALLED_APPS += (
+    'gunicorn',
+)
+########## END WEBSERVER CONFIGURATION
