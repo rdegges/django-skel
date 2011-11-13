@@ -57,4 +57,4 @@ try:
             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 except:
     print "Unexpected error:", exc_info()
-########## DATABASE CONFIGURATION
+########## END DATABASE CONFIGURATION
