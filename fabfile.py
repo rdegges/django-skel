@@ -12,6 +12,7 @@ env.settings = 'settings.prod'
 HEROKU_STACK = 'cedar'
 HEROKU_ADDONS = (
     'shared-database:5mb',
+    'pgbackups:auto-month',
     'newrelic:standard',
 )
 ########## END GLOBALS
