@@ -14,6 +14,7 @@ HEROKU_ADDONS = (
     'shared-database:5mb',
     'pgbackups:auto-month',
     'newrelic:standard',
+    'loggly:mole',
 )
 ########## END GLOBALS
 
