@@ -188,6 +188,7 @@ LOGGING = {
 }
 ########## END LOGGING CONFIGURATION
 
+
 ########## CELERY CONFIGURATION
 # See: http://ask.github.com/django-celery/
 INSTALLED_APPS += (
