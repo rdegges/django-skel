@@ -60,14 +60,6 @@ except:
 ########## END DATABASE CONFIGURATION
 
 
-########## WEBSERVER CONFIGURATION
-# See: http://gunicorn.org/
-INSTALLED_APPS += (
-    'gunicorn',
-)
-########## END WEBSERVER CONFIGURATION
-
-
 ########## CELERY CONFIGURATION
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-transport
 BROKER_TRANSPORT = 'amqplib'
@@ -81,3 +73,11 @@ CELERY_RESULT_BACKEND = 'amqp'
 # See: http://docs.celeryproject.org/en/latest/configuration.html#celery-task-result-expires
 CELERY_TASK_RESULT_EXPIRES = 60 * 60 * 5
 ########## END CELERY CONFIGURATION
+
+
+########## WEBSERVER CONFIGURATION
+# See: http://gunicorn.org/
+INSTALLED_APPS += (
+    'gunicorn',
+)
+########## END WEBSERVER CONFIGURATION
