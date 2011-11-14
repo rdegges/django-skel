@@ -75,6 +75,23 @@ CELERY_TASK_RESULT_EXPIRES = 60 * 60 * 5
 ########## END CELERY CONFIGURATION
 
 
+########## STORAGE CONFIGURATION
+# See: http://django-storages.readthedocs.org/en/latest/index.html
+INSTALLED_APPS += (
+    'storages',
+)
+
+# See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY', '')
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME', '')
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+########## END STORAGE CONFIGURATION
+
+
 ########## WEBSERVER CONFIGURATION
 # See: http://gunicorn.org/
 INSTALLED_APPS += (
