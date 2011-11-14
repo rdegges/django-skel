@@ -74,7 +74,7 @@ def migrate(app=None):
 ########## FILE MANAGEMENT
 @task
 def collectstatic():
-    """Collect all static files, and serve them for production usage."""
+    """Collect all static files, and copy them to S3 for production usage."""
     local('%(run)s collectstatic --noinput --settings=%(settings)s' % env)
 ########## END FILE MANAGEMENT
 
