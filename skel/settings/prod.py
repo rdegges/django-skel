@@ -5,6 +5,8 @@ from os import environ
 from sys import exc_info
 from urlparse import urlparse, uses_netloc
 
+from S3 import CallingFormat
+
 from common import *
 
 
@@ -83,12 +85,15 @@ INSTALLED_APPS += (
 
 # See: http://django-storages.readthedocs.org/en/latest/backends/amazon-S3.html#settings
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
 
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID', '')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY', '')
 AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME', '')
 
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 ########## END STORAGE CONFIGURATION
 
 
