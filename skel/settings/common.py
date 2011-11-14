@@ -4,6 +4,8 @@
 from sys import path
 from os.path import abspath, basename, dirname, join, normpath
 
+import djcelery
+
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to the Django project directory:
@@ -185,3 +187,12 @@ LOGGING = {
     }
 }
 ########## END LOGGING CONFIGURATION
+
+########## CELERY CONFIGURATION
+# See: http://ask.github.com/django-celery/
+INSTALLED_APPS += (
+    'djcelery',
+)
+
+djcelery.setup_loader()
+########## END CELERY CONFIGURATION
