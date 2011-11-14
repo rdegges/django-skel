@@ -19,6 +19,7 @@ HEROKU_ADDONS = (
     'statsmix:developer',
     'custom_domains:basic',
     'zerigo_dns:basic',
+    'memcache',
     'rabbitmq', # Currently in BETA.
 )
 ########## END GLOBALS
