@@ -6,3 +6,4 @@ South==0.7.3
 gunicorn==0.13.4
 newrelic==1.0.2.130
 django-celery==2.4.2
+django-storages==1.1.3
