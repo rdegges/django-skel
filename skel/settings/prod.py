@@ -66,3 +66,15 @@ INSTALLED_APPS += (
     'gunicorn',
 )
 ########## END WEBSERVER CONFIGURATION
+
+
+########## CELERY CONFIGURATION
+# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-transport
+BROKER_TRANSPORT = 'amqplib'
+
+# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-url
+BROKER_URL = env('RABBITMQ_URL', '')
+
+# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-use-ssl
+BROKER_USE_SSL = True
+########## END CELERY CONFIGURATION
