@@ -62,6 +62,23 @@ except:
 ########## END DATABASE CONFIGURATION
 
 
+########## CACHE CONFIGURATION
+# See: https://docs.djangoproject.com/en/1.3/ref/settings/#caches
+CACHES = {
+    'default': {
+        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+        'LOCATION': 'localhost:11211',
+        'TIMEOUT': 500,
+        'BINARY': True,
+        'OPTIONS': {
+            'tcp_nodelay': True,
+            'ketama': True,
+        }
+    }
+}
+########## END CACHE CONFIGURATION
+
+
 ########## CELERY CONFIGURATION
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-transport
 BROKER_TRANSPORT = 'amqplib'
