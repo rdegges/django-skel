@@ -16,6 +16,7 @@ HEROKU_ADDONS = (
     'newrelic:standard',
     'scheduler:standard',
     'loggly:mole',
+    'statsmix:developer',
 )
 ########## END GLOBALS
 
