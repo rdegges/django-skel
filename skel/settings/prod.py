@@ -77,4 +77,7 @@ BROKER_URL = env('RABBITMQ_URL', '')
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
 CELERY_RESULT_BACKEND = 'amqp'
+
+# See: http://docs.celeryproject.org/en/latest/configuration.html#celery-task-result-expires
+CELERY_TASK_RESULT_EXPIRES = 60 * 60 * 5
 ########## END CELERY CONFIGURATION
