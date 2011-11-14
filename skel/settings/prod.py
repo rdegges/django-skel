@@ -77,4 +77,7 @@ BROKER_URL = env('RABBITMQ_URL', '')
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-use-ssl
 BROKER_USE_SSL = True
+
+# See: http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
+CELERY_RESULT_BACKEND = 'amqp'
 ########## END CELERY CONFIGURATION
