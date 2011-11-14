@@ -10,3 +10,4 @@ django-storages==1.1.3
 boto==2.1.1
 pylibmc==1.2.2
 git+https://github.com/craigkerstiens/django-pylibmc.git
+django-kombu
