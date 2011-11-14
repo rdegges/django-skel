@@ -71,6 +71,14 @@ def migrate(app=None):
 ########## END DATABASE MANAGEMENT
 
 
+########## FILE MANAGEMENT
+@task
+def collectstatic():
+    """Collect all static files, and serve them for production usage."""
+    local('%(run)s collectstatic --noinput --settings=%(settings)s' % env)
+########## END FILE MANAGEMENT
+
+
 ########## HEROKU MANAGEMENT
 @task
 def bootstrap():
