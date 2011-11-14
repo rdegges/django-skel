@@ -54,7 +54,7 @@ DATABASES = {
         'PORT': '',
     }
 }
-########## DATABASE CONFIGURATION
+########## END DATABASE CONFIGURATION
 
 
 ########## GENERAL CONFIGURATION
@@ -72,7 +72,7 @@ USE_I18N = True
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#use-l10n
 USE_L10N = True
-########## GENERAL CONFIGURATION
+########## END GENERAL CONFIGURATION
 
 
 ########## MEDIA CONFIGURATION
