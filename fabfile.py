@@ -17,6 +17,8 @@ HEROKU_ADDONS = (
     'scheduler:standard',
     'loggly:mole',
     'statsmix:developer',
+    'custom_domains:basic',
+    'zerigo_dns:basic',
 )
 ########## END GLOBALS
 
