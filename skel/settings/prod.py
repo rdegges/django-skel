@@ -35,6 +35,9 @@ EMAIL_SUBJECT_PREFIX = '[%s] ' % SITE_NAME
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
+
+# See: https://docs.djangoproject.com/en/1.3/ref/settings/#server-email
+SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
 
