@@ -124,6 +124,17 @@ FIXTURE_DIRS = (
 
 
 ########## TEMPLATE CONFIGURATION
+# See: https://docs.djangoproject.com/en/1.3/ref/settings/#template-context-processors
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages'
+)
+
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#template-loaders
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
