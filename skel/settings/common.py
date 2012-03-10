@@ -115,6 +115,14 @@ SECRET_KEY = 'rj(k$z-@@kkhowzdrf)d(sv1w^d_a4twj1!4b0j(hyymu+v36h'
 ########## END SECRET CONFIGURATION
 
 
+########## FIXTURE CONFIGURATION
+# See: https://docs.djangoproject.com/en/1.3/ref/settings/#std:setting-FIXTURE_DIRS
+FIXTURE_DIRS = (
+    normpath(join(DJANGO_ROOT, 'fixtures')),
+)
+########## END FIXTURE CONFIGURATION
+
+
 ########## TEMPLATE CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#template-loaders
 TEMPLATE_LOADERS = (
