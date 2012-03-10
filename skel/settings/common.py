@@ -103,6 +103,12 @@ STATICFILES_FINDERS = (
 ########## END STATIC FILE CONFIGURATION
 
 
+########## AJAX CONFIGURATION
+# See: http://docs.dajaxproject.com/dajaxice/available-settings.html#dajaxice-media-prefix
+DAJAXICE_MEDIA_PREFIX = 'dajaxice'
+########## END AJAX CONFIGURATION
+
+
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#secret-key
 SECRET_KEY = 'rj(k$z-@@kkhowzdrf)d(sv1w^d_a4twj1!4b0j(hyymu+v36h'
