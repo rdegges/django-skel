@@ -55,7 +55,7 @@ DATABASES = {
 
 ########## GENERAL CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#time-zone
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Los_Angeles'
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#language-code
 LANGUAGE_CODE = 'en-us'
