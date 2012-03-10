@@ -1,7 +1,6 @@
 """Common settings and globals."""
 
 
-from sys import path
 from os.path import abspath, basename, dirname, join, normpath
 
 import djcelery
@@ -16,11 +15,6 @@ SITE_ROOT = dirname(DJANGO_ROOT)
 
 # Site name:
 SITE_NAME = basename(DJANGO_ROOT)
-
-# Add our 'apps' and 'libs' modules to the system path, so we can use them
-# transparently in python import statements:
-path.append(normpath(join(DJANGO_ROOT, 'apps')))
-path.append(normpath(join(DJANGO_ROOT, 'libs')))
 ########## END PATH CONFIGURATION
 
 
