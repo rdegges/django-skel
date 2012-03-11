@@ -3,7 +3,7 @@
 
 from os.path import abspath, basename, dirname, join, normpath
 
-import djcelery
+from djcelery import setup_loader
 
 
 ########## PATH CONFIGURATION
@@ -196,6 +196,9 @@ THIRD_PARTY_APPS = (
 
     # AJAX helpers:
     'dajaxice',
+
+    # Asynchronous task queue:
+    'djcelery',
 )
 
 LOCAL_APPS = (
@@ -230,9 +233,5 @@ LOGGING = {
 
 ########## CELERY CONFIGURATION
 # See: http://ask.github.com/django-celery/
-INSTALLED_APPS += (
-    'djcelery',
-)
-
-djcelery.setup_loader()
+setup_loader()
 ########## END CELERY CONFIGURATION
