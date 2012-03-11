@@ -191,11 +191,11 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    # AJAX helpers:
-    'dajaxice',
-
     # Database migration helpers:
     'south',
+
+    # AJAX helpers:
+    'dajaxice',
 )
 
 LOCAL_APPS = (
