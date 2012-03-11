@@ -167,8 +167,7 @@ ROOT_URLCONF = '%s.urls' % SITE_NAME
 
 
 ########## APP CONFIGURATION
-# See: https://docs.djangoproject.com/en/1.3/ref/settings/#installed-apps
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -176,13 +175,27 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Useful template tags:
+    'django.contrib.humanize',
+
     # Admin panel and documentation:
     'django.contrib.admin',
     'django.contrib.admindocs',
+)
 
-    # South database migrations:
+THIRD_PARTY_APPS = (
+    # AJAX helpers:
+    'dajaxice',
+
+    # Database migration helpers:
     'south',
 )
+
+LOCAL_APPS = (
+)
+
+# See: https://docs.djangoproject.com/en/1.3/ref/settings/#installed-apps
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 ########## END APP CONFIGURATION
 
 
