@@ -1,6 +1,7 @@
 """Common settings and globals."""
 
 
+from datetime import timedelta
 from os.path import abspath, basename, dirname, join, normpath
 
 from djcelery import setup_loader
@@ -232,6 +233,9 @@ LOGGING = {
 
 
 ########## CELERY CONFIGURATION
+# See: http://celery.readthedocs.org/en/latest/configuration.html#celery-task-result-expires
+CELERY_TASK_RESULT_EXPIRES = timedelta(minutes=30)
+
 # See: http://ask.github.com/django-celery/
 setup_loader()
 ########## END CELERY CONFIGURATION
