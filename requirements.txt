@@ -5,6 +5,7 @@ django-htmlmin==0.5.1
 django-kombu==0.9.4
 django-pylibmc-sasl==0.2.4
 django-storages==1.1.4
+django-dajaxice==0.2
 Fabric==1.4.0
 gunicorn==0.14.1
 newrelic==1.1.0.192
