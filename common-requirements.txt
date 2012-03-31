@@ -1,0 +1,9 @@
+boto==2.2.2
+Django==1.4
+django-celery==2.5.1
+django-htmlmin==0.5.1
+django-kombu==0.9.4
+django-storages==1.1.4
+django-dajaxice==0.2
+South==0.7.3
+Sphinx==1.1.2
