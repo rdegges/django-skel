@@ -112,7 +112,7 @@ DAJAXICE_MEDIA_PREFIX = 'dajaxice'
 
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#secret-key
-SECRET_KEY = {{ secret_key }}
+SECRET_KEY = r"{{ secret_key }}"
 ########## END SECRET CONFIGURATION
 
 
