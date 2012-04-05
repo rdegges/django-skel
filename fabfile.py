@@ -6,7 +6,7 @@ from fabric.api import abort, env, local, settings, task
 
 
 ########## GLOBALS
-env.run = 'heroku run python skel/manage.py'
+env.run = 'heroku run python {{ project_name }}/manage.py'
 env.settings = 'settings.prod'
 
 HEROKU_STACK = 'cedar'
