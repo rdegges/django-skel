@@ -44,7 +44,8 @@ django-skel currently supports Django 1.4. To create a new django-skel base
 project, run the following command (this assumes you have Django 1.4 installed
 already):
 
-    $ django-admin.py startproject --template=https://github.com/rdegges/django-skel/zipball/master --name=Procfile woot
+    $ django-admin.py startproject --template=https://github.com/rdegges/django-skel/zipball/master woot
+    $ heroku config:add DJANGO_SETTINGS_MODULE=myproject.settings.prod
 
 Where ``woot`` is the name of the project you'd like to create.
 
