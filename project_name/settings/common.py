@@ -239,3 +239,6 @@ CELERY_TASK_RESULT_EXPIRES = timedelta(minutes=30)
 # See: http://ask.github.com/django-celery/
 setup_loader()
 ########## END CELERY CONFIGURATION
+
+# Python dotted path to the WSGI application used by Django's runserver.
+WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
