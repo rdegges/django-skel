@@ -1,7 +1,7 @@
 django-skel
 ===========
 
-A modern Django (1.3.1) project skeleton.
+A modern Django (1.4) project skeleton.
 
 
 Meta
