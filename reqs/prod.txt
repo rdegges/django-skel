@@ -5,5 +5,4 @@ Fabric==1.4.0
 gunicorn==0.14.1
 newrelic==1.1.0.192
 psycopg2==2.4.4
-pylibmc==1.2.2
 django-pylibmc-sasl==0.2.4
