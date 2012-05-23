@@ -2,9 +2,8 @@
 
 
 from os import environ
-from sys import exc_info
-from urlparse import urlparse, uses_netloc
 
+from postgresify import postgresify
 from S3 import CallingFormat
 
 from common import *
@@ -42,26 +41,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 
 ########## DATABASE CONFIGURATION
-# See: http://devcenter.heroku.com/articles/django#postgres_database_config
-uses_netloc.append('postgres')
-uses_netloc.append('mysql')
-
-try:
-    if environ.has_key('DATABASE_URL'):
-        url = urlparse(environ['DATABASE_URL'])
-        DATABASES['default'] = {
-            'NAME': url.path[1:],
-            'USER': url.username,
-            'PASSWORD': url.password,
-            'HOST': url.hostname,
-            'PORT': url.port,
-        }
-        if url.scheme == 'postgres':
-            DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-        if url.scheme == 'mysql':
-            DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-except:
-    print "Unexpected error:", exc_info()
+DATABASES = postgresify()
 ########## END DATABASE CONFIGURATION
 
 
