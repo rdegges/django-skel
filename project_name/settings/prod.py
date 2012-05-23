@@ -3,6 +3,7 @@
 
 from os import environ
 
+from memcacheify import memcacheify
 from postgresify import postgresify
 from S3 import CallingFormat
 
@@ -47,18 +48,7 @@ DATABASES = postgresify()
 
 ########## CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#caches
-CACHES = {
-    'default': {
-        'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
-        'LOCATION': 'localhost:11211',
-        'TIMEOUT': 500,
-        'BINARY': True,
-        'OPTIONS': {
-            'tcp_nodelay': True,
-            'ketama': True,
-        }
-    }
-}
+CACHES = memcacheify()
 ########## END CACHE CONFIGURATION
 
 
