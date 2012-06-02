@@ -1,3 +1,3 @@
-web: newrelic-admin run-program gunicorn -c gunicorn.ini wsgi:application
+web: newrelic-admin run-program gunicorn -c gunicorn.py wsgi:application
 scheduler: python manage.py celeryd -B -E --maxtasksperchild=1000
 worker: python manage.py celeryd -E --maxtasksperchild=1000
