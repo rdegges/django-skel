@@ -1,11 +1,10 @@
-boto==2.2.2
+boto==2.5.1
 Django==1.4
-django-celery==2.5.1
+django-celery==2.5.5
 django-htmlmin==0.5.1
 django-kombu==0.9.4
 django-storages==1.1.4
 django-dajaxice==0.2
 Fabric==1.4.2
-South==0.7.3
-Sphinx==1.1.2
-mimeparse==0.1.3
+South==0.7.5
+Sphinx==1.1.3
