@@ -1,7 +1,6 @@
 -r common.txt
 django-heroku-memcacheify==0.2
 django-heroku-postgresify==0.2
-Fabric==1.4.0
 gunicorn==0.14.1
 newrelic==1.1.0.192
 psycopg2==2.4.4
