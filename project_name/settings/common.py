@@ -109,12 +109,6 @@ STATICFILES_FINDERS = (
 ########## END STATIC FILE CONFIGURATION
 
 
-########## AJAX CONFIGURATION
-# See: http://docs.dajaxproject.com/dajaxice/available-settings.html#dajaxice-media-prefix
-DAJAXICE_MEDIA_PREFIX = 'dajaxice'
-########## END AJAX CONFIGURATION
-
-
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#secret-key
 SECRET_KEY = r"{{ secret_key }}"
@@ -199,9 +193,6 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
-
-    # AJAX helpers:
-    'dajaxice',
 
     # Asynchronous task queue:
     'djcelery',
