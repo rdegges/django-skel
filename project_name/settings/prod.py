@@ -10,25 +10,21 @@ from S3 import CallingFormat
 from common import *
 
 
-# Helper lambda for gracefully degrading environmental variables:
-env = lambda e, d: environ[e] if environ.has_key(e) else d
-
-
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-host
-EMAIL_HOST = env('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_HOST = environ.get('EMAIL_HOST', 'smtp.gmail.com')
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-host-password
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD', '')
+EMAIL_HOST_PASSWORD = environ.get('EMAIL_HOST_PASSWORD', '')
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-host-user
-EMAIL_HOST_USER = env('EMAIL_HOST_USER', 'your_email@example.com')
+EMAIL_HOST_USER = environ.get('EMAIL_HOST_USER', 'your_email@example.com')
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-port
-EMAIL_PORT = env('EMAIL_PORT', 587)
+EMAIL_PORT = environ.get('EMAIL_PORT', 587)
 
 # See: https://docs.djangoproject.com/en/1.3/ref/settings/#email-subject-prefix
 EMAIL_SUBJECT_PREFIX = '[%s] ' % SITE_NAME
@@ -57,7 +53,7 @@ CACHES = memcacheify()
 BROKER_TRANSPORT = 'amqplib'
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-url
-BROKER_URL = env('RABBITMQ_URL', '')
+BROKER_URL = environ.get('RABBITMQ_URL', '')
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
 CELERY_RESULT_BACKEND = 'amqp'
@@ -79,9 +75,9 @@ STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
 
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID', '')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY', '')
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME', '')
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', '')
+AWS_STORAGE_BUCKET_NAME = environ.get('AWS_STORAGE_BUCKET_NAME', '')
 
 STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 ########## END STORAGE CONFIGURATION
