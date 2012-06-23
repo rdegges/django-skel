@@ -170,6 +170,7 @@ ROOT_URLCONF = '%s.urls' % SITE_NAME
 
 ########## APP CONFIGURATION
 DJANGO_APPS = (
+    # Default Django apps:
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
