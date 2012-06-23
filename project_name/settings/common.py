@@ -152,9 +152,6 @@ MIDDLEWARE_CLASSES = (
     # Use GZip compression to reduce bandwidth.
     'django.middleware.gzip.GZipMiddleware',
 
-    # Minify all HTML when DEBUG is False.
-    'htmlmin.middleware.HtmlMinifyMiddleware',
-
     # Default Django middleware.
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
