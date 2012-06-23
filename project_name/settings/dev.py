@@ -47,17 +47,6 @@ CACHES = {
 
 
 ########## CELERY CONFIGURATION
-# See: http://ask.github.com/django-celery/
-INSTALLED_APPS += (
-    'djkombu',
-)
-
-# See: http://docs.celeryq.org/en/latest/configuration.html#broker-transport
-BROKER_TRANSPORT = 'djkombu.transport.DatabaseTransport'
-
-# See: http://docs.celeryq.org/en/latest/configuration.html#celery-result-dburi
-CELERY_RESULT_DBURI = DATABASES['default']
-
 # See: http://docs.celeryq.org/en/latest/configuration.html#celery-always-eager
 CELERY_ALWAYS_EAGER = True
 ########## END CELERY CONFIGURATION
