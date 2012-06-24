@@ -91,6 +91,25 @@ STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 ########## END STORAGE CONFIGURATION
 
 
+########## COMPRESSION CONFIGURATION
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_OFFLINE
+COMPRESS_OFFLINE = True
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_STORAGE
+COMPRESS_STORAGE = DEFAULT_FILE_STORAGE
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_FILTERS
+COMPRESS_CSS_FILTERS += [
+    'compressor.filters.cssmin.CSSMinFilter',
+]
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_JS_FILTERS
+COMPRESS_JS_FILTERS += [
+    'compressor.filters.jsmin.JSMinFilter',
+]
+########## END COMPRESSION CONFIGURATION
+
+
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
