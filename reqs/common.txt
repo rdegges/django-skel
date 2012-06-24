@@ -1,4 +1,3 @@
-boto==2.5.1
 Django==1.4
 django-celery==2.5.5
 django-compressor==dev
