@@ -64,6 +64,9 @@ BROKER_TRANSPORT = 'amqplib'
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-pool-limit
 BROKER_POOL_LIMIT = 3
 
+# See: http://docs.celeryproject.org/en/latest/configuration.html#broker-connection-max-retries
+BROKER_CONNECTION_MAX_RETRIES = 0
+
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-url
 BROKER_URL = environ.get('RABBITMQ_URL') or environ.get('CLOUDAMQP_URL')
 
