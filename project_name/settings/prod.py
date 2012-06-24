@@ -83,11 +83,3 @@ STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 ########## SECRET CONFIGURATION
 SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
 ########## END SECRET CONFIGURATION
-
-
-########## WEBSERVER CONFIGURATION
-# See: http://gunicorn.org/
-INSTALLED_APPS += (
-    'gunicorn',
-)
-########## END WEBSERVER CONFIGURATION
