@@ -53,7 +53,7 @@ CACHES = memcacheify()
 BROKER_TRANSPORT = 'amqplib'
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#broker-url
-BROKER_URL = environ.get('RABBITMQ_URL', '')
+BROKER_URL = environ.get('RABBITMQ_URL') or environ.get('CLOUDAMQP_URL')
 
 # See: http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
 CELERY_RESULT_BACKEND = 'amqp'
