@@ -181,3 +181,31 @@ Need to add more workers? No problem::
 Need to check and see how many dynos you have running? Easy::
 
     $ heroku ps
+
+
+Step 5 - Deploy Your Static Assets
+----------------------------------
+
+The last step in successfully deploying your production Django application is
+to compress and then upload all your static assets to Amazon S3 (css, js,
+images, etc.).
+
+To do this, simply run the following commands::
+
+    $ heroku run python manage.py collectstatic --noinput
+    $ heroku run python manage.py compress
+
+And that's it!
+
+
+Extra Reading
+-------------
+
+You are now running a best practices Django website, on top of Heroku, using
+Amazon S3 to serve your static content!
+
+If you'd like to learn more about Heroku, scaling, and stuff like that, you
+should probably check out `my blog <http://rdegges.com/>`_ because I write
+about this stuff all the time >:)
+
+Oh, and also, read `Heroku's documentation <https://devcenter.heroku.com/>`_ :)
