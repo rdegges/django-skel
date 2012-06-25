@@ -30,6 +30,10 @@ Lastly, create a Git repository for your new project, and commit everything::
     $ git add .; git ci -m 'First commit using django-skel!'
     ...
 
+Easy, right?!
+
+.. image:: _static/not-bad.png
+
 
 Install All the Dependencies!
 -----------------------------
@@ -44,5 +48,3 @@ run the following command::
 
     $ pip install -r reqs/dev.txt
     ...
-
-.. image:: _static/not-bad.png
