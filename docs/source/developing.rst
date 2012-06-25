@@ -17,9 +17,9 @@ talk about development.
   your code, since minified code is much more difficult to reverse engineer.
 
 I've found that using this workflow is the most effective way for me to write
-code. If your needs differ from mine, you should be able to easily tweak
-``django-skel``'s settings by editing the files found in
-``project_name/settings`` to your liking. All the options you'll find there are
-documented, and easy to understand.
+code. If your needs differ from mine, you can easily tweak ``django-skel``'s
+settings by editing the files found in ``project_name/settings`` to your
+liking. All the options you'll find there are documented, and easy to
+understand.
 
 With that said, let's discuss development!
