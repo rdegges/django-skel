@@ -41,7 +41,7 @@ Install All the Dependencies!
 Before I start writing code, I like to setup a `virtualenv
 <http://www.virtualenv.org/en/latest/index.html>`_ for myself--this allows me
 to install all my project dependencies in a local installation, as opposed to
-isntalling all of them globally on my box.
+installing all of them globally on my box.
 
 To install the local dependencies (that you'll need to run your site locally),
 run the following command::
