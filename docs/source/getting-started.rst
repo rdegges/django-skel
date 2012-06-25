@@ -27,7 +27,7 @@ Lastly, create a Git repository for your new project, and commit everything::
 
     $ git init
     Initialized empty Git repository in /home/rdegges/Code/ex/woot/.git/
-    $ git add .; git ci -m 'First commit using django-skel!'
+    $ git add .; git commit -m 'First commit using django-skel!'
     ...
 
 Easy, right?!
