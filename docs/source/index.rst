@@ -48,8 +48,8 @@ Follow the Guide Below to Victory!
 Also...
 -------
 
-Need help? Got a question? Want to random pointless comments? Head over to our
-`GitHub issue tracker <https://github.com/rdegges/django-skel/issues>`_ and
+Need help? Got a question? Want to post random pointless comments? Head over to
+our `GitHub issue tracker <https://github.com/rdegges/django-skel/issues>`_ and
 leave a message!
 
 Wanna just hang out with some other bad-ass hackers like yourself? Say hi on
