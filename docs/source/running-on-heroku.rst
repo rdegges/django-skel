@@ -209,3 +209,7 @@ should probably check out `my blog <http://rdegges.com/>`_ because I write
 about this stuff all the time >:)
 
 Oh, and also, read `Heroku's documentation <https://devcenter.heroku.com/>`_ :)
+
+Now... Go and be happy!
+
+.. image:: _static/happy-overload.png
