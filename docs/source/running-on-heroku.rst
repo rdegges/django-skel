@@ -123,7 +123,7 @@ variables, run the following commands::
     $ heroku config:add AWS_ACCESS_KEY_ID=xxx
     $ heroku config:add AWS_SECRET_ACCESS_KEY=xxx
     $ heroku config:add AWS_STORAGE_BUCKET_NAME=xxx
-    
+
     # Replace 'woot' with the name of your project:
     $ heroku config:add DJANGO_SETTINGS_MODULE=woot.settings.prod
 
