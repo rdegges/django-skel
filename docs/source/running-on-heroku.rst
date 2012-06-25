@@ -96,6 +96,18 @@ you can simply run::
 
 Bam!
 
+The last thing you'll need to do is specify a default PostgreSQL database
+(``django-skel`` requires this). To do this, run::
+
+    $ heroku pg:info
+
+And you should see a database name, something like ``HEROKU_POSTGRESQL_NAVY``.
+Once you've got that name, run::
+
+    $ heroku pg:promote HEROKU_POSTGRESQL_NAVY
+
+To set your database as the default.
+
 
 Step 3 - Configure the Environment
 ----------------------------------
