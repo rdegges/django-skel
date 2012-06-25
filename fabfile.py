@@ -7,8 +7,6 @@ from fabric.api import abort, env, local, settings, task
 
 ########## GLOBALS
 env.run = 'heroku run python manage.py'
-env.settings = 'settings.prod'
-
 HEROKU_ADDONS = (
     'shared-database:5mb',
     'pgbackups:auto-month',
@@ -64,10 +62,9 @@ def migrate(app=None):
     :param str app: Django app name to migrate.
     """
     if app:
-        local('%s migrate %s --noinput --settings=%s' % (env.run, app,
-                env.settings))
+        local('%s migrate %s --noinput' % (env.run, app))
     else:
-        local('%(run)s migrate --noinput --settings=%(settings)s' % env)
+        local('%(run)s migrate --noinput' % env)
 ########## END DATABASE MANAGEMENT
 
 
@@ -75,7 +72,7 @@ def migrate(app=None):
 @task
 def collectstatic():
     """Collect all static files, and copy them to S3 for production usage."""
-    local('%(run)s collectstatic --noinput --settings=%(settings)s' % env)
+    local('%(run)s collectstatic --noinput' % env)
 ########## END FILE MANAGEMENT
 
 
