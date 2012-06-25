@@ -54,8 +54,8 @@ Bam!
 .. image:: _static/happy.png
 
 
-Running Your Site
------------------
+Running Your Site Locally
+-------------------------
 
 Before you start coding, let's bootstrap our SQLite database (for local
 development), and test our the Django admin panel just to make sure
