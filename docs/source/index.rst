@@ -43,3 +43,15 @@ Follow the Guide Below to Victory!
     :maxdepth: 2
 
     prerequisites
+
+
+Also...
+-------
+
+Need help? Got a question? Want to random pointless comments? Head over to our
+`GitHub issue tracker <https://github.com/rdegges/django-skel/issues>`_ and
+leave a message!
+
+Wanna just hang out with some other bad-ass hackers like yourself? Say hi on
+`#heapify <irc://irc.oftc.net/#heapify>`_, or you could follow me on `twitter
+<https://twitter.com/#!/rdegges>`_.
