@@ -48,3 +48,7 @@ run the following command::
 
     $ pip install -r reqs/dev.txt
     ...
+
+Bam!
+
+.. image:: _static/happy.png
