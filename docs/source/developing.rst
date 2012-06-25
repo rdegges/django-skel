@@ -1,6 +1,8 @@
 Developing
 ==========
 
+.. image:: _static/computer-stare.png
+
 Now that you've got your project running locally and the basics covered, let's
 talk about development.
 
