@@ -29,6 +29,12 @@ shines.
 * Built in support for production deployments on `Heroku's <http://www.heroku.com/>`_
   platform.
 
+But, more importantly, ``django-skel`` gives you a really clean, simple, and
+reliable project template for developers of any experience level.
+
+If you want a best practices approach to Django, use ``django-skel`` and you
+won't be disappointed!
+
 
 Contents:
 
