@@ -44,6 +44,7 @@ Follow the Guide Below to Victory!
 
     prerequisites
     getting-started
+    developing
 
 
 Also...
