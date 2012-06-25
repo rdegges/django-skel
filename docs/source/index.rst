@@ -1,17 +1,7 @@
-Welcome to django-skel's documentation!
-=======================================
+django-skel - A Modern Django 1.4 Project Skeleton
+==================================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
