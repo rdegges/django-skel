@@ -1,5 +1,9 @@
-django-skel - A Modern Django 1.4 Project Skeleton
-==================================================
+django-skel
+===========
+
+``django-skel`` is a modern Django 1.4 project skeleton.
+
+.. image:: assets/skel.jpg
 
 Contents:
 

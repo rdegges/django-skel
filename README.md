@@ -3,7 +3,7 @@ django-skel
 
 A modern Django (1.4) project skeleton.
 
-![A fancy Django project skeleton](https://github.com/rdegges/django-skel/raw/master/assets/skel.jpg)
+![A fancy Django project skeleton](https://github.com/rdegges/django-skel/raw/master/docs/source/_static/skel.jpg)
 
 
 Meta
