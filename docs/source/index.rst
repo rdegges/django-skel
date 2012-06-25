@@ -3,7 +3,7 @@ django-skel
 
 ``django-skel`` is a modern Django 1.4 project skeleton.
 
-.. image:: assets/skel.jpg
+.. image:: _static/skel.jpg
 
 Contents:
 
