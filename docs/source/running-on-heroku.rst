@@ -130,6 +130,15 @@ variables, run the following commands::
     # A random long (40 characters or so) string:
     $ heroku config:add SECRET_KEY=xxx
 
+.. note::
+    Not sure what to use for your ``SECRET_KEY`` setting? You can always do
+    something like::
+
+        from os import urandom
+        print urandom(40)
+
+    And copy the resulting string for usage :)
+
 If you'd like to, you can also enable email support out of the box by setting
 the optional email environment variables as well::
 
