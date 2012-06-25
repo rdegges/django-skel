@@ -76,3 +76,5 @@ command applies our South migrations.
 
 From now on, whenever you want to run your site locally for testing, you can
 follow these standard Django conventions.
+
+.. image:: _static/happy-big-smile.png
