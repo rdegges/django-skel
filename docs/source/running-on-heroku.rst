@@ -95,3 +95,34 @@ you can simply run::
     $ heroku addons:upgrade newrelic:professional
 
 Bam!
+
+
+Step 3 - Configure the Environment
+----------------------------------
+
+Heroku operates via environment variables. This is the preferred place to store
+all those secret things (passwords, API keys, etc.) that you don't want lurking
+around your version control system.
+
+``django-skel`` requires several environment variables be set. To set these
+variables, run the following commands::
+
+    # Your AWS security credentials:
+    $ heroku config:add AWS_ACCESS_KEY_ID=xxx
+    $ heroku config:add AWS_SECRET_ACCESS_KEY=xxx
+    $ heroku config:add AWS_STORAGE_BUCKET_NAME=xxx
+
+    # A random long (40 characters or so) string:
+    $ heroku config:add SECRET_KEY=xxx
+
+If you'd like to, you can also enable email support out of the box by setting
+the optional email environment variables as well::
+
+    $ heroku config:add EMAIL_HOST=xxx
+    $ heroku config:add EMAIL_HOST_PASSWORD=xxx
+    $ heroku config:add EMAIL_HOST_USER=xxx
+    $ heroku config:add EMAIL_PORT=xxx
+
+.. note::
+    ``EMAIL_HOST`` and ``EMAIL_PORT`` will default to the proper settings for
+    Google apps, so if you're using that--feel free to leave those out.
