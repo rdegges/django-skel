@@ -23,3 +23,24 @@ liking. All the options you'll find there are documented, and easy to
 understand.
 
 With that said, let's discuss development!
+
+
+Managing Your Settings
+----------------------
+
+Managing your settings using ``django-skel`` is simple. Follow the rules below,
+and you can't go wrong:
+
+1. Place all your 'common' settings in ``settings/common.py``. This includes
+   stuff like: Django apps you need to use in all environmnets (development,
+   production, etc.), global variables, etc.
+
+2. Place all your development-specific settings in ``settings/dev.py``. 'Nuff
+   said.
+
+3. Place all your production-specific settings in ``settings/prod.py``.
+
+4. If you're confused, follow the documentation links! I've heavily documented
+   the settings files, and included reference links to all the relevant
+   documentation. If you've got a question, or are confused about something,
+   consult the docs first!
