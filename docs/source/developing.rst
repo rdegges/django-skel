@@ -75,7 +75,7 @@ handling CSS files in the most optimial way possible. What this means for you,
 as a developer, is that if you're planning on writing / using CSS in your
 Django project, you should keep the following in mind.
 
-When your include a CSS file in your HTML, it normally looks something like
+When you include a CSS file in your HTML, it normally looks something like
 this::
 
     <html>
