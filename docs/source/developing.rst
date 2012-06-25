@@ -115,3 +115,34 @@ do the cool stuff mentioned above.
 
 As an added benefit, in production mode, it will also minify your CSS files for
 you (removing whitespace to save space). But more on that later!
+
+
+Javascript Best Practices
+-------------------------
+
+Much like CSS best practices, ``django-skel`` is optimized for handling
+Javascript code in the same way that it does for CSS (see the previous section
+for details).
+
+To make use of both the Django templating engine (so that you can use stuff
+like ``{{ STATIC_URL }}`` in your Javascript code) as well as Javascript
+minification and obfuscation, change your HTML templates from this::
+
+    <html>
+      <head>
+        <script src="{{ STATIC_URL }}js/script.js" type="text/javascript"></script>
+      </head>
+    </html>
+
+To this::
+
+    {% load compress %}
+    <html>
+      <head>
+        {% compress js %}
+          <script src="{{ STATIC_URL }}js/script.js" type="text/javascript"></script>
+        {% endcompress %}
+      </head>
+    </html>
+
+And that's all there is to it!
