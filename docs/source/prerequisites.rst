@@ -5,8 +5,7 @@ Before we go any further, I'm going to assume that you've got the following
 things:
 
 * You're running some flavor of Linux or Mac (untested) as your desktop OS.
-* You've got Django 1.4 installed on your box. If you don't, run ``pip install
-  django==1.4`` right now!
+* You've got Django 1.4 installed somewhere (inside a virtualenv, preferably).
 * You have an `Amazon Web Services <http://aws.amazon.com/>`_ account. This is
   required if you want to use our production deployment tools. If you don't
   want to run your code in production, don't worry about it.
