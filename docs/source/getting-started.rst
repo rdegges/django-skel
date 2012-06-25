@@ -64,7 +64,9 @@ everything's working::
     $ python manage.py syncdb
     ...
     $ python manage.py migrate
+    ...
     $ python manage.py runserver
+    ...
 
 Assuming everything's working, you should now be able to visit
 http://localhost:8000/admin/ in your web browser, and log in.
