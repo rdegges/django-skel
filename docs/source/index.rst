@@ -43,6 +43,7 @@ Follow the Guide Below to Victory!
     :maxdepth: 2
 
     prerequisites
+    getting-started
 
 
 Also...
