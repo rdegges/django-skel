@@ -42,3 +42,56 @@ remote to your project. To push your code to Heroku, all you do is push to the
 
 That will 'deploy' your code straight to Heroku! From now on, whenever you want
 to deploy your code, just run this command.
+
+
+Step 2 - Install the Addons
+---------------------------
+
+Now that you've got your Heroku application going, let's install some `Heroku
+Addons <https://addons.heroku.com/>`_. Heroku is a modular system. The core of
+Heroku allows you to run your code, but doesn't provide any extra
+infrastructure services.
+
+To get things like PostgreSQL, memcache, RabbitMQ, etc.--you need to install
+Heroku addons to do what you want.
+
+Let's install our required addons now--these addons are all free (you can
+upgrade them at any time in the future). ``django-skel`` already supports all
+of these, and requires most of them to function::
+
+    $ heroku addons:add cloudamqp:lemur
+    $ heroku-postgresql:dev
+    $ scheduler:standard
+    $ memcache:5mb
+    $ newrelic:standard
+    $ pgbackups:auto-month
+    $ sentry:developer
+
+`cloudamqp <https://addons.heroku.com/cloudamqp>`_ is a hosted RabbitMQ
+service. This is what makes our task queueing (via Celery) possible.
+
+`heroku-postgresql <https://addons.heroku.com/heroku-postgresql>`_ is a hosted
+PostgreSQL service that kicks ass.
+
+`scheduler <https://addons.heroku.com/scheduler>`_ is a cron replacement.
+
+`memcache <https://addons.heroku.com/memcache>`_ is a hosted memcache service.
+
+`newrelic <https://addons.heroku.com/newrelic>`_ is the best application
+monitoring tool ever created.
+
+`pgbackups <https://addons.heroku.com/pgbackups>`_ is an excellent PostgreSQL
+backup tool that stores backups automatically to S3, and lets you download and
+manage your backups easily.
+
+`sentry <https://addons.heroku.com/sentry>`_ is a pretty neat error aggregation
+and searching tool that makes debugging issues simple.
+
+Just for the record, if you'd like to upgrade any of these free addons, you can
+do so by running the ``heroku addons:upgrade`` command. For example--to switch
+from the free newrelic addon to their paid addon which has lots more features,
+you can simply run::
+
+    $ heroku addons:upgrade newrelic:professional
+
+Bam!
