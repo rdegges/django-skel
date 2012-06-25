@@ -36,7 +36,6 @@ If you want a best practices approach to Django, use ``django-skel`` and you
 won't be disappointed!
 
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
+   prerequisites
