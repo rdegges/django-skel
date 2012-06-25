@@ -8,16 +8,13 @@ from fabric.api import abort, env, local, settings, task
 ########## GLOBALS
 env.run = 'heroku run python manage.py'
 HEROKU_ADDONS = (
-    'shared-database:5mb',
-    'pgbackups:auto-month',
-    'newrelic:standard',
+    'cloudamqp:lemur',
+    'heroku-postgresql:dev',
     'scheduler:standard',
-    'loggly:mole',
-    'statsmix:developer',
-    'custom_domains:basic',
-    'zerigo_dns:basic',
     'memcache:5mb',
-    'rabbitmq', # Currently in BETA.
+    'newrelic:standard',
+    'pgbackups:auto-month',
+    'sentry:developer',
 )
 ########## END GLOBALS
 
