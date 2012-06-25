@@ -134,8 +134,8 @@ variables, run the following commands::
     Not sure what to use for your ``SECRET_KEY`` setting? You can always do
     something like::
 
-        from os import urandom
-        print urandom(40)
+        from random import choice
+        print ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
 
     And copy the resulting string for usage :)
 
