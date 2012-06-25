@@ -9,7 +9,6 @@ from fabric.api import abort, env, local, settings, task
 env.run = 'heroku run python manage.py'
 env.settings = 'settings.prod'
 
-HEROKU_STACK = 'cedar'
 HEROKU_ADDONS = (
     'shared-database:5mb',
     'pgbackups:auto-month',
@@ -54,7 +53,7 @@ def cont(cmd, message):
 @task
 def syncdb():
     """Run a syncdb."""
-    local('%(run)s syncdb --noinput --settings=%(settings)s' % env)
+    local('%(run)s syncdb --noinput' % env)
 
 
 @task
@@ -92,8 +91,7 @@ def bootstrap():
         - Apply all database migrations.
         - Initialize New Relic's monitoring add-on.
     """
-    cont('heroku create --stack %s' % HEROKU_STACK,
-            "Couldn't create the Heroku app, continue anyway?")
+    cont('heroku create', "Couldn't create the Heroku app, continue anyway?")
 
     for addon in HEROKU_ADDONS:
         cont('heroku addons:add %s' % addon,
