@@ -52,3 +52,25 @@ run the following command::
 Bam!
 
 .. image:: _static/happy.png
+
+
+Running Your Site
+-----------------
+
+Before you start coding, let's bootstrap our SQLite database (for local
+development), and test our the Django admin panel just to make sure
+everything's working::
+
+    $ python manage.py syncdb
+    ...
+    $ python manage.py migrate
+    $ python manage.py runserver
+
+Assuming everything's working, you should now be able to visit
+http://localhost:8000/admin/ in your web browser, and log in.
+
+The ``syncdb`` command here just initializes our database, and the ``migrate``
+command applies our South migrations.
+
+From now on, whenever you want to run your site locally for testing, you can
+follow these standard Django conventions.
