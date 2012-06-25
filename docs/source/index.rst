@@ -35,7 +35,7 @@ reliable project template for developers of any experience level.
 If you want a best practices approach to Django, use ``django-skel`` and you
 won't be disappointed!
 
-
 .. toctree::
-   :maxdepth: 2
-   prerequisites
+    :maxdepth: 2
+
+    prerequisites
