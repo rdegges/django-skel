@@ -44,3 +44,74 @@ and you can't go wrong:
    the settings files, and included reference links to all the relevant
    documentation. If you've got a question, or are confused about something,
    consult the docs first!
+
+
+Storing Static Assets
+---------------------
+
+Always place your static assets (images, javascript, css, etc.) into a
+sub-directory of your project folder called ``assets``. If your project is
+named ``woot``, for instance, then you should place all your static files
+inside of ``woot/assets``.
+
+The way I like to organize this is by doing something like::
+
+    $ mkdir woot/assets
+    $ cd woot/assets
+    $ mkdir {css,js,img}
+
+Then I'll place all my css files in ``woot/assets/css``, my js files in
+``woot/assets/js``, and my images into ``woot/assets/img``.
+
+This way, you've got a clear directory hierarchy, and anyone else that looks at
+your code will immediately recognize what's going on.
+
+
+CSS Best Practices
+------------------
+
+One really great feature of ``django-skel`` is that it's already optimized for
+handling CSS files in the most optimial way possible. What this means for you,
+as a developer, is that if you're planning on writing / using CSS in your
+Django project, you should keep the following in mind.
+
+When your include a CSS file in your HTML, it normally looks something like
+this::
+
+    <html>
+      <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+      </head>
+    </html>
+
+That's great and all, but by doing things that way you'll miss out on a
+powerful feature: CSS templating. Wouldn't it be nice if you could use ``{{
+STATIC_URL }}`` *inside* of your CSS files as well? That way you could write
+nifty rules like::
+
+    body {
+      background: url({{ STATIC_URL }}img/omgyea.png);
+    }
+
+The above code snippet is great because it will work in both local development
+mode (by having Django serve your image locally), as well as production mode
+(by having Amazon S3 serve your image through its CDN). To make use of this
+awesome functionality, all you have to do is modify your HTML template like
+so::
+
+    {% load compress %}
+    <html>
+      <head>
+        {% compress css %}
+          <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+        {% endcompress %}
+      </head>
+    </html>
+
+Using `django-compressor <http://django_compressor.readthedocs.org/en/latest/index.html>`_
+you get this functionality out of the box! Behind the scenes, django-compressor
+will run your CSS files through the Django templating engine, which allows you
+do the cool stuff mentioned above.
+
+As an added benefit, in production mode, it will also minify your CSS files for
+you (removing whitespace to save space). But more on that later!
