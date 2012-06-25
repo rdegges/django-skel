@@ -46,6 +46,7 @@ Follow the Guide Below to Victory!
     getting-started
     layout
     developing
+    running-on-heroku
 
 
 Also...
