@@ -138,3 +138,46 @@ the optional email environment variables as well::
 .. note::
     ``EMAIL_HOST`` and ``EMAIL_PORT`` will default to the proper settings for
     Google apps, so if you're using that--feel free to leave those out.
+
+
+Step 4 - Spin It Up!
+--------------------
+
+Now that everything is configured and ready to go, let's spin up our backend!
+
+Instead of spinning up 'servers', Heroku allows us to spin up 'dynos', which
+are essentially locked-down virtual server instances. The ``Procfile`` defined
+at the root of your ``django-skel`` project defines our three service types:
+
+* ``web`` - The service that runs our Django application behind gunicorn.
+* ``scheduler`` - The service that runs a Celery worker and the Celerybeat
+  daemon.
+* ``worker`` - The service that runs a Celery worker **only**.
+
+
+To spin up a web dyno, run: ``heroku scale web=1``. You can confirm that
+everything is working by running ``heroku ps`` afterwards. That will run a
+single web dyno.
+
+If you'd like run a Celery worker, run: ``heroku scale scheduler=1``. If you
+need more than one worker, you can add additional power by spinning up the
+``worker`` dynos, via ``heroku scale worker=1``.
+
+.. note::
+    No matter what, never **EVER** spin up more than one ``scheduler``. The
+    scheduler process runs Celerybeat, which schedules background tasks. Having
+    more than one scheduler running can cause serious duplicate task problems.
+    Instead, you should always have one ``scheduler`` running, and as many
+    ``worker`` instances as you need.
+
+Need to add more web servers? No problem::
+
+    $ heroku scale web=100
+
+Need to add more workers? No problem::
+
+    $ heroku scale worker=100
+
+Need to check and see how many dynos you have running? Easy::
+
+    $ heroku ps
