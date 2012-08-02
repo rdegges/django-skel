@@ -16,6 +16,13 @@ HEROKU_ADDONS = (
     'pgbackups:auto-month',
     'sentry:developer',
 )
+HEROKU_CONFIGS = (
+    'DJANGO_SETTINGS_MODULE={{ project_name }}.settings.prod',
+    'SECRET_KEY={{ secret_key }}'
+    'AWS_ACCESS_KEY_ID=xxx',
+    'AWS_SECRET_ACCESS_KEY=xxx',
+    'AWS_STORAGE_BUCKET_NAME=xxx',
+)
 ########## END GLOBALS
 
 
@@ -90,6 +97,10 @@ def bootstrap():
     for addon in HEROKU_ADDONS:
         cont('heroku addons:add %s' % addon,
             "Couldn't add %s to your Heroku app, continue anyway?" % addon)
+
+    for config in HEROKU_CONFIGS:
+        cont('heroku config:add %s' % config,
+            "Couldn't add %s to your Heroku app, continue anyway?" % config)
 
     cont('git push heroku master',
             "Couldn't push your application to Heroku, continue anyway?")
