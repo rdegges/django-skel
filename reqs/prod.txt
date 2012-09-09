@@ -1,7 +1,7 @@
 -r common.txt
 boto==2.5.1
 cssmin==0.1.4
-django-heroku-memcacheify==0.2
+django-heroku-memcacheify==0.3
 django-heroku-postgresify==0.2
 django-storages==1.1.4
 gevent==0.13.7

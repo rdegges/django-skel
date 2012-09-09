@@ -1,6 +1,6 @@
-Django==1.4
+Django==1.4.1
 django-celery==2.5.5
 django-compressor==1.2
 Fabric==1.4.2
-South==0.7.5
+South==0.7.6
 Sphinx==1.1.3
