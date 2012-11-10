@@ -49,6 +49,21 @@ run the following command::
     $ pip install -r reqs/dev.txt
     ...
 
+.. note::
+    If the pip command above fails, it means you're missing some C libraries
+    that are required for some of the Python libraries to work. The ones you
+    need (on Ubuntu) are:
+
+    * libevent-dev
+    * libpq-dev
+    * libmemcached-dev
+    * zlib1g-dev
+    * libssl-dev
+    * python-dev
+    * build-essential
+
+    I also recommend you install ``postgresql-client``, even though it isn't required.
+
 Bam!
 
 .. image:: _static/happy.png
