@@ -1,4 +1,4 @@
-Django==1.4.2
+Django>=1.4.0,<=1.4.9
 django-celery==3.0.11
 django-compressor==1.2
 Fabric==1.4.3
