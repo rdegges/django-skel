@@ -23,6 +23,11 @@ The next thing you'll probably want to do is remove my project docs::
 That way you don't get the documentation you're reading right now in your new
 project.
 
+Next, create your first django app for this project::
+
+    $ mkdir woot/apps/myapp
+    $ python manage.py startapp myapp woot/apps/myapp
+
 Lastly, create a Git repository for your new project, and commit everything::
 
     $ git init
