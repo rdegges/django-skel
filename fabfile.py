@@ -11,7 +11,7 @@ HEROKU_ADDONS = (
     'cloudamqp:lemur',
     'heroku-postgresql:dev',
     'scheduler:standard',
-    'memcache:5mb',
+    'memcachier:dev',
     'newrelic:standard',
     'pgbackups:auto-month',
     'sentry:developer',
