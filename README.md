@@ -43,7 +43,7 @@ Install
 =======
 
 django-skel currently supports Django 1.5. To create a new django-skel base
-project, run the following command (this assumes you have Django 1.4 installed
+project, run the following command (this assumes you have Django 1.5 installed
 already):
 
     $ django-admin.py startproject --template=https://github.com/rdegges/django-skel/zipball/master woot
