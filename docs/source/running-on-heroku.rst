@@ -62,7 +62,7 @@ of these, and requires most of them to function::
     $ heroku addons:add cloudamqp:lemur
     $ heroku-postgresql:dev
     $ scheduler:standard
-    $ memcache:5mb
+    $ memcachier:dev
     $ newrelic:standard
     $ pgbackups:auto-month
     $ sentry:developer
@@ -75,7 +75,7 @@ PostgreSQL service that kicks ass.
 
 `scheduler <https://addons.heroku.com/scheduler>`_ is a cron replacement.
 
-`memcache <https://addons.heroku.com/memcache>`_ is a hosted memcache service.
+`memcachier <https://addons.heroku.com/memcachier>`_ is a hosted memcache service.
 
 `newrelic <https://addons.heroku.com/newrelic>`_ is the best application
 monitoring tool ever created.
