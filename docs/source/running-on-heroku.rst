@@ -60,12 +60,12 @@ upgrade them at any time in the future). ``django-skel`` already supports all
 of these, and requires most of them to function::
 
     $ heroku addons:add cloudamqp:lemur
-    $ heroku-postgresql:dev
-    $ scheduler:standard
-    $ memcachier:dev
-    $ newrelic:standard
-    $ pgbackups:auto-month
-    $ sentry:developer
+    $ heroku addons:add heroku-postgresql:dev
+    $ heroku addons:add scheduler:standard
+    $ heroku addons:add memcachier:dev
+    $ heroku addons:add newrelic:standard
+    $ heroku addons:add pgbackups:auto-month
+    $ heroku addons:add sentry:developer
 
 `cloudamqp <https://addons.heroku.com/cloudamqp>`_ is a hosted RabbitMQ
 service. This is what makes our task queueing (via Celery) possible.
