@@ -18,7 +18,7 @@ HEROKU_ADDONS = (
 )
 HEROKU_CONFIGS = (
     'DJANGO_SETTINGS_MODULE={{ project_name }}.settings.prod',
-    'SECRET_KEY={{ secret_key }}'
+    'SECRET_KEY={{ secret_key }}',
     'AWS_ACCESS_KEY_ID=xxx',
     'AWS_SECRET_ACCESS_KEY=xxx',
     'AWS_STORAGE_BUCKET_NAME=xxx',
