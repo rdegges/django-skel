@@ -26,7 +26,7 @@ project.
 Next, create your first django app for this project::
 
     $ mkdir woot/apps/myapp
-    $ python manage.py startapp myapp woot/apps/myapp
+    $ django-admin.py startapp myapp woot/apps/myapp
 
 Lastly, create a Git repository for your new project, and commit everything::
 
